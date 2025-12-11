@@ -1,0 +1,11 @@
+[package]
+name = "apply-speffect"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+fromsoftware-shared = { git = "https://github.com/vswarte/fromsoftware-rs.git", package = "fromsoftware-shared" }
+eldenring = { git = "https://github.com/vswarte/fromsoftware-rs.git", package = "eldenring" }
+
+[lib]
+crate-type = ["cdylib"]
