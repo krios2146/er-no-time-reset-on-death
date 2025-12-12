@@ -145,7 +145,8 @@ fn get_game_data_man() -> &'static mut GameDataMan {
             resolved_va
         };
 
-        let game_data_man_ptr = resolved_va as *mut GameDataMan;
+        let pointer: *const *mut GameDataMan = resolved_va as *const *mut GameDataMan;
+        let game_data_man_ptr: *mut GameDataMan = unsafe { *pointer };
         break unsafe { &mut *game_data_man_ptr };
     };
     game_data_man
