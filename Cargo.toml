@@ -6,6 +6,9 @@ edition = "2024"
 [dependencies]
 fromsoftware-shared = { git = "https://github.com/vswarte/fromsoftware-rs.git", package = "fromsoftware-shared" }
 eldenring = { git = "https://github.com/vswarte/fromsoftware-rs.git", package = "eldenring" }
+pelite = "0.10.0"
+windows = { version = "0.62.2", features = ["Win32_System_LibraryLoader", "Win32_System_ProcessStatus", "Win32_System_Threading", "Win32_Foundation"] }
+chrono = "0.4"
 
 [lib]
 crate-type = ["cdylib"]
